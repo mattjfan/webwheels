@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
 body{
-  /*font-family: 'Quicksand', sans-serif;*/
+  font-family: 'Quicksand', sans-serif;
+  background: #ffedcc;
+  color:#7d7294;
 }
 
 .logo{
@@ -10,14 +12,28 @@ body{
 .header{
    font-size:3vw;
 }
+.column{
+  padding-left:30%;padding-right:30%
+}
 @media only screen and (max-width: 670px) {
   .logo{
     max-width:80%;
-
 }
   .header{
       font-size:12vw;
   }
+  .column{
+    padding-left:5%;padding-right:5%;
+
+  }
+}
+.ui.button{
+  background:#3cdfc1;
+  color:white;
+}
+.ui.button:hover{
+  background:#16aa89;
+  color:white;
 }
 
 .hero{
@@ -30,4 +46,14 @@ body{
   -webkit-justify-content: center;
   display: -webkit-flex;
 
+}
+
+.footer {
+  text-align:right;
+  padding:2rem;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
 }
