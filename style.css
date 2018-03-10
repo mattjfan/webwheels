@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body{
+  /*font-family: 'Quicksand', sans-serif;*/
+}
+
+.logo{
+  max-width:20%;
+}
+.header{
+   font-size:3vw;
+}
+@media only screen and (max-width: 670px) {
+  .logo{
+    max-width:80%;
+
+}
+  .header{
+      font-size:12vw;
+  }
+}
+
+.hero{
+  height:100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  -webkit-align-items: center;
+  -webkit-flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -webkit-justify-content: center;
+  display: -webkit-flex;
+
+}
