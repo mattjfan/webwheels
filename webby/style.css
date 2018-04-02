@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  background: #ffedcc;
+  color:#7d7294;
+}
+
+.logo{
+  max-width:20%;
+}
+.header{
+   font-size:3vw;
+}
+.column{
+  padding-left:30%;padding-right:30%
+}
+@media only screen and (max-width: 670px) {
+  .logo{
+    max-width:80%;
+}
+  .header{
+      font-size:12vw;
+  }
+  .column{
+    padding-left:5%;padding-right:5%;
+
+  }
+}
+.ui.button{
+  background:#3cdfc1;
+  color:white;
+}
+.ui.button:hover{
+  background:#16aa89;
+  color:white;
+}
+
+.hero{
+  height:100vh;
+    padding-left: 5%;
+    padding-right: 5%;
+  -webkit-align-items: center;
+  -webkit-flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -webkit-justify-content: center;
+  display: -webkit-flex;
+
+}
+.lighter{
+  color:#9794af;
+}
+.footer {
+  text-align:right;
+  padding:2rem;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+}
+
+.search-success{
+  border-color: green;
+  color:red;
+}
+.ui.button{
+  background:gray;
+  color:white;
+}
+.ui.button:hover{
+  background:gray;
+  color:white;
+}
+.ui.button.search{
+  background:#3cdfc1;
+  color:white;
+}
+.ui.button.search:hover{
+  background:#16aa89;
+  color:white;
+}

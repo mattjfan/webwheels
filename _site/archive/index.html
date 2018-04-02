@@ -14,7 +14,6 @@
     <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.css">
     <!-- main css -->
-    <link href="/style.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 
 
@@ -36,45 +35,45 @@
   gtag('config', 'UA-109281338-2');
 </script>
 
-<style>body{background-color:#ecf0f1;}</style>
+
 </head>
 
 <body>
-  <div class='hero'>
+  <div>
     <center>
-    <img class='webby' src='img/webby/webby_base_rest.gif' style='margin-top:-20px;margin-bottom:-20px;'>
-    <!--div class="ui search" >
-      <div class="ui input focus">
-        <input placeholder="Search..." type="text" style='min-width:900px;' id ='search'>
-      </div>
+    <img class='logo' src='img/webwheels2.png' style='margin-top:20px;'>
+    <h1 class='header'><strong>Web Wheels</strong></h1>
+    <p class='column'> Hi there! We're making webwheels, an
+    interactive internet literacy simulator for kids to help build safe and healthy habits
+  for navigating the web.</p>
 
-    <div class="results"></div>
-  </div-->
-    <input placeholder="Search..." type="text" style='min-width:900px;' id ='search'>
   <br>
-  <button class="ui button" id='search_button'>
-    Search!
-</button>
+  <div class='lighter'>
+  <h3>Who are we?</h3>
+  <p class='column'>We are a group of 4 students in the University of Maryland’s Entrepreneurship and Innovation Program (EIP). Our team has a diverse skillset that combines both technical and business skills.
+</p>
+<h3>Why are we making WebWheels?</h3>
+<p class='column'>
+  As technology plays a larger role in society, children are being exposed to using technology earlier in their lives. However, children do not receive sufficient education about navigating the web in a safe, efficient, and healthy manner.
+</p>
+<h3>How does it work?</h3>
+<p class='column'>
+  Download an overlay onto your current Web browser so your children can learn the intricacies of the Web, distinguishing right from wrong and ultimately understand why
+</p>
+  <h3>When can I try it out?</h3>
+  <p class='column'>We are currently in the development phases but plan to launch in the coming months!</p>
+</div>
+<br>
+
+
+  <p>
+  <p><b>Interested? Sign up here for updates!</b></p>
+    <br>
+    <a href='http://eepurl.com/dny9YD'><button class='ui button' style='margin-bottom:35px;'>Sign Up for Updates</button></a>
   </center>
 </div>
 
 <div class='footer'>© 2018 WebWheels</div>
-<script
-			  src="https://code.jquery.com/jquery-3.3.1.min.js"
-			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-			  crossorigin="anonymous"></script>
-<script>
-var word="";
-$('#search').on("keyup", function() {
-  word = $(this).val();
-  if (word=='secret'){
-    $(this).css('border-color', 'green');
-    $('#search_button').addClass("search");
-  }else{$(this).css('border-color', 'lightgray')
-      $('#search_button').removeClass("search");}
-});
-</script>
-
 </body>
 
 </html>

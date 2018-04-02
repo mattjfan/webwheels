@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.css">
     <!-- main css -->
     <link href="/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 
 
 
@@ -41,22 +42,39 @@
 <body>
   <div class='hero'>
     <center>
-    <img class='webby' src='/img/webby/webby_base_rest.gif' style='margin-top:-20px;margin-bottom:-20px;'>
-    <div class="ui search" >
+    <img class='webby' src='img/webby/webby_base_rest.gif' style='margin-top:-20px;margin-bottom:-20px;'>
+    <!--div class="ui search" >
       <div class="ui input focus">
-        <input placeholder="Search..." type="text" style='min-width:900px;'>
+        <input placeholder="Search..." type="text" style='min-width:900px;' id ='search'>
       </div>
 
     <div class="results"></div>
-  </div>
+  </div-->
+    <input placeholder="Search..." type="text" style='min-width:900px;' id ='search'>
   <br>
-  <button class="ui button">
+  <button class="ui button" id='search_button'>
     Search!
 </button>
   </center>
 </div>
 
 <div class='footer'>© 2018 WebWheels</div>
+<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+<script>
+var word="";
+$('#search').on("keyup", function() {
+  word = $(this).val();
+  if (word=='secret'){
+    $(this).css('border-color', 'green');
+    $('#search_button').addClass("search");
+  }else{$(this).css('border-color', 'lightgray')
+      $('#search_button').removeClass("search");}
+});
+</script>
+
 </body>
 
 </html>
