@@ -42,7 +42,7 @@
 <body>
   <div class='hero'>
     <center>
-    <img class='webby' src='img/webby/webby_base_rest.gif' style='margin-top:-20px;margin-bottom:-20px;'>
+    <img class='webby' id='webby' src='img/webby/webby_base_rest.gif' style='margin-top:-20px;margin-bottom:-20px;'>
     <!--div class="ui search" >
       <div class="ui input focus">
         <input placeholder="Search..." type="text" style='min-width:900px;' id ='search'>
@@ -50,11 +50,13 @@
 
     <div class="results"></div>
   </div--><br style='line-height:0px;'>
-    <input placeholder="Search..." type="text" style='width:90vw; border-radius:5rem;' id ='search'>
+    <input placeholder="Search..." type="text" style='width:90vw; border-radius:5rem;padding:5px;margin-bottom:20px;' id ='search'>
   <br style='line-height:2rem'>
-  <button class="ui button" id='search_button'>
-    Search!
-</button>
+  <a href='#' id='link'>
+    <button class="ui button" id='search_button'>
+      Search!
+    </button>
+  </a>
   </center>
 </div>
 
@@ -65,14 +67,74 @@
 			  crossorigin="anonymous"></script>
 <script>
 var word="";
+var goodWords=[
+  'learn','information','learning','wikipedia',
+  'google scholar','science','kahn academy'
+];
+var badWords=[
+  'violence','stab','porn','destroy','drugs'
+];
+/*
+var audio = new Audio('audio_file.mp3');
+audio.play();*/
 $('#search').on("keyup", function() {
   word = $(this).val();
-  if (word=='secret'){
-    $(this).css('border-color', 'green');
+  if (hasGoodAndNoBadWords(word)){
+    $(this).css('border-color', '#1bcc91');
     $('#search_button').addClass("search");
-  }else{$(this).css('border-color', 'lightgray')
-      $('#search_button').removeClass("search");}
-});
+    $('#link').attr('href','/searcher');
+    $('#webby').attr('src','img/webby/webby_happy_talk.gif').load(function(){this.width;});
+
+  }else if(hasBadWord(word)){
+    $(this).css('border-color', 'lightgray');
+    $('#search_button').removeClass("search");
+    $('#link').attr('href','/searcher');
+    $('#webby').attr('src','img/webby/webby_base_frown.gif').load(function(){this.width;});
+  }else{
+      $(this).css('border-color', 'lightgray');
+      $('#search_button').removeClass("search");
+      $('#link').attr('href','/searcher');
+        $('#webby').attr('src','img/webby/webby_base_rest.gif');
+}});
+function hasGoodWord(word){
+  var arrayLength = goodWords.length;
+  for (var w = 0; w < arrayLength; w++) {
+    if(word.includes(goodWords[w])){
+      return true;
+    }
+  }
+  return false;
+}
+function hasBadWord(word){
+  var arrayLength = badWords.length;
+  for (var w = 0; w < arrayLength; w++) {
+    if(word.includes(badWords[w])){
+      return true;
+    }
+  }
+  return false;
+}
+
+function hasGoodAndNoBadWords(word){
+  if(hasGoodWord(word) && !hasBadWord(word)){
+    return true;
+  }
+  return false;
+}
+function isGoodWord(w){
+  if(w == 'learn' ||
+      w == 'information' ||
+    w == 'learning' ||
+    w == 'wikipedia'||
+    w == 'google scholar' ||
+    w == 'science'){
+    return true;
+  }
+  return false
+}
+function statementPasses(s){
+
+}
 </script>
 
 </body>
